@@ -18,12 +18,12 @@
 			codeAddress();
 		}
 
-		function codeAddress();
+		function codeAddress()
 		{
 			var address = document.getElementById("address").value;
 			if (geocoder)
 			{
-				geocoder.geocoder({'address': address}, function(results, status)
+				geocoder.geocode({'address': address}, function(results, status)
 				{
 					if (status == google.maps.GeocoderStatus.OK)
 					{
@@ -41,7 +41,7 @@
 	</head>
 	<body onload="initialize()">
 		<input type="hidden" id="address" value="<?php echo $_POST["bookstore"]; ?>">
-		<div id="map_canvas" style="width:500px; height:500px;"></div>
+		<div id="map_canvas" style="width:600px; height:600px;"></div>
 		<a href="map.php">上一頁</a>
 	</body>
 </html>
